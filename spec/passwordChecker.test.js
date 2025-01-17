@@ -21,6 +21,12 @@ describe("passwordChecker function should return the answer ", function () {
     expect(result).toBe(false);
   });
 
+  it("Should return false for 9 characters ", function () {
+    const result = main.passwordChecker("abcdefghi");
+
+    expect(result).toBe(true);
+  });
+
 });
 
 
