@@ -1,3 +1,7 @@
 export class Main {
- // writing of the function
+    passwordChecker(password){
+        if (password.length === 1 ) return false
+        
+        return true;
+    }
 }
