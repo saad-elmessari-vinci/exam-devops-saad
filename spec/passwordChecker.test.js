@@ -21,7 +21,7 @@ describe("passwordChecker function should return the answer ", function () {
     expect(result).toBe(false);
   });
 
-  it("Should return false for 9 characters ", function () {
+  it("Should return true for 9 characters ", function () {
     const result = main.passwordChecker("abcdefghi");
 
     expect(result).toBe(true);
@@ -31,5 +31,11 @@ describe("passwordChecker function should return the answer ", function () {
     const result = main.oneSpecialCharacterAtLeastChecker("abcdefghi");
 
     expect(result).toBe(false);
+  });
+
+  it("Should return true for 'abcgd!' (does contains at least one special character) ", function () {
+    const result = main.oneSpecialCharacterAtLeastChecker("abcdfgh!");
+
+    expect(result).toBe(true);
   });
 });
