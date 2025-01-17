@@ -1,7 +1,7 @@
 import { Main } from "../src/passwordChecker.js";
 
 describe("passwordChecker function should return the answer ", function () {
-    const main = new Main();
+  const main = new Main();
 
   it("Should return false for 1 characters ", function () {
     const result = main.passwordChecker("a");
@@ -27,6 +27,9 @@ describe("passwordChecker function should return the answer ", function () {
     expect(result).toBe(true);
   });
 
+  it("Should return false for 'abcgde' (doesn't contains at least one special character) ", function () {
+    const result = main.oneSpecialCharacterAtLeastChecker("abcdefghi");
+
+    expect(result).toBe(false);
+  });
 });
-
-
